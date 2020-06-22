@@ -1,0 +1,3 @@
+<connectionStrings>
+	<add name="PathogenTypeDbContext" connectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=aspnet-PathogenType;Integrated Security=SSPI;AttachDBFFilename=|DataDirectory|\PathogenTypes.mdf" providerName="System.Data.SqlClient" />
+</connectionStrings>
