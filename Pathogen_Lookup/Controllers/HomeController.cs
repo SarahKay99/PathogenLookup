@@ -6,14 +6,16 @@ using System.Web.Mvc;
 
 namespace Pathogen_Lookup.Controllers
 {
-    public class PathogenType 
+    // This is our data model.
+    public class PathogenTypes
     { 
         public String Type { get; set; }
         public String URL { get; set; }
     }
     public class HomeController : Controller
     {
-        static public List<PathogenType> PathogenTypeDB = new List<PathogenType>();
+        // List of our data model
+        static public List<PathogenTypes> PathogenTypeDB = new List<PathogenTypes>();
         public ActionResult Index()
         {
             return View();

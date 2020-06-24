@@ -32,7 +32,7 @@
     </div>
 </div>
 
-
+<!-- This code makes the submit button work.-->
 @using Pathogen_Lookup.Controllers
 @{
     var action = "none";
@@ -44,7 +44,7 @@
         if (type != null && url != null)
         {
             Pathogen_Lookup.Controllers.HomeController.PathogenTypeDB.Add(
-                new PathogenType { Type = type, URL = url });
+                new PathogenTypes { Type = type, URL = url });
         }
     }
 }
@@ -78,8 +78,8 @@
             </tr>
         </thead>
         <tbody>
-
-            @foreach(PathogenType item in Pathogen_Lookup.Controllers.HomeController.PathogenTypeDB)
+            <!-- Includes data that is stored in database. Allows submit button to work. -->
+            @foreach(PathogenTypes item in Pathogen_Lookup.Controllers.HomeController.PathogenTypeDB)
             {
                 <tr>
                     <td>@item.Type</td>
@@ -92,9 +92,9 @@
 
     Add: 
     <ul>
-        <li>Virus. https://en.wikipedia.org/wiki/List_of_virus_species</li> 
-        <li>Bacteria. https://en.wikipedia.org/wiki/List_of_clinically_important_bacteria</li>
-        <li>Fungus. https://www.britannica.com/topic/list-of-fungi-2032576</li>
+        <li>Virus. https://en.wikipedia.org/wiki/List_of_virus_species </li> 
+        <li>Bacteria. https://en.wikipedia.org/wiki/List_of_clinically_important_bacteria </li>
+        <li>Fungus. https://www.britannica.com/topic/list-of-fungi-2032576 </li>
     </ul>
     <br />
     <i>*Linking to external webpages for the time being*</i>
